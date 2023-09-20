@@ -12,4 +12,4 @@ And YCoordinates <endingPositionY>
 Examples:
 |startingPositionX|startingPositionY|direction|endingPositionX|endingPositionY|
 |0|0|NORTH|0|1|
-|0|0|SOUTH|0|0|
+|0|0|SOUTH|0|0| 
