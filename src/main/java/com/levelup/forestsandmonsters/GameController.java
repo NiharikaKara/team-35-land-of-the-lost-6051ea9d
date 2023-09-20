@@ -14,7 +14,7 @@ public class GameController {
     }
 
     public void setCharacterPosition(Point coordinates) {
-        //}
+        }
 
     GameStatus status;
 
