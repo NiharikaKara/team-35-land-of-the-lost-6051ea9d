@@ -31,4 +31,16 @@ public class MoveSteps {
         GameController.GameStatus status = gc.getStatus();
         this.currentPosition = status.currentPosition;
     }
+    
+    @Then("the character is now at position with XCoordinates {int}")
+    public void checkXCoordinates(int endX) {
+        assertNotNull("Expected position not null", this.currentPosition);
+        assertEquals(endX, this.currentPosition.x);
+    }
+
+    @Then("YCoordinates {int}")
+    public void checkYCoordinates(int endY) {
+        assertNotNull("Expected position not null", this.currentPosition);
+        assertEquals(endY, this.currentPosition.y);
+    }
 }
