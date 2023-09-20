@@ -10,7 +10,11 @@ public class GameController {
     public class GameStatus {
         // TODO: Add other status data
         public String characterName = DEFAULT_CHARACTER_NAME;
+        public Point currentPosition = null;
     }
+
+    public void setCharacterPosition(Point coordinates) {
+        //}
 
     GameStatus status;
 
