@@ -52,4 +52,24 @@ public class MoveSteps {
         assertNotNull("Expected position not null", this.currentPosition);
         assertEquals(endY, this.currentPosition.y);
     }
+
+    @Given("the player's starting move count is {int}")
+public void the_player_s_starting_move_count_is(Integer count) {
+    // Write code here that turns the phrase above into concrete actions
+    gc.setMoveCount(count);  
+    Integer moveCount = gc.getMoveCount();
+    assertNotNull("Expected moveCount not null", moveCount);
+    assertEquals(count, moveCount);  
+
+}
+
+@Then("the player's ending move count is {int}")
+public void the_player_s_ending_move_count_is(Integer count) {
+    // Write code here that turns the phrase above into concrete actions
+    Integer moveCount = gc.getMoveCount();
+    assertNotNull("Expected moveCount not null", moveCount);
+    assertEquals(count, moveCount);
+
+}
+
 }

@@ -5,11 +5,11 @@ I want to move my character. If they attempt to move past a boundary then it sta
 
 Scenario Outline: Move in direction
 Given the character starts at position with XCoordinates <startingPositionX>
-And starts at YCordinates <startingPositionY>
+And starts at YCoordinates <startingPositionY>
 And the player's starting move count is <startingMoveCount>
 And the player chooses to move in <direction>
 When the character moves
-Then Character is now at position with XCoordinates <endingPositionX>
+Then the character is now at position with XCoordinates <endingPositionX>
 And YCoordinates <endingPositionY>
 Then the player's ending move count is <endingMoveCount>
 
