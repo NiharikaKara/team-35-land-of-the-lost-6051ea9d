@@ -7,7 +7,7 @@ And starts at YCordinates <startingPosition>
 And the player chooses to move in <direction>
 When the character moves
 Then Character is n ow at position with XCoordinates <endingPositionX>
-And YCoordinates <endingPositionY> 
+And YCoordinates <endingPositionY>  
 
 Examples:
 |startingPositionX|startingPositionY|direction|endingPositionX|endingPositionY|
