@@ -35,25 +35,26 @@ public class MapTest {
     public void test_map_move() {
         Map map = new Map(10,10);
         
-        int[] position = new int[]{0, 0};
+        Point oldPosition = new Point(0, 0);
+        Point newPosition = new Point(0, 1);
 
-        int[] returnPosition = map.move(position);
+        Point returnPosition = map.move(oldPosition, newPosition);
 
-        assertArrayEquals(position, returnPosition);
+        assertEquals(newPosition, returnPosition);
     }
 
     @Test
     public void test_map_bad_move() {
         Map map = new Map(10,10);
         
-        int[] positionBadX = new int[]{-1, 0};
-        int[] positionBadY = new int[]{0, -1};
-        int[] expectedPosition = new int[]{0, 0};
+        Point positionBadX = new Point(-1, 0);
+        Point positionBadY = new Point(0, -1);
+        Point oldPosition = new Point(0, 0);
 
-        int[] returnPositionX = map.move(positionBadX);
-        int[] returnPositionY = map.move(positionBadY);
+        Point returnPositionX = map.move(oldPosition, positionBadX);
+        Point returnPositionY = map.move(oldPosition, positionBadY);
 
-        assertArrayEquals(expectedPosition, returnPositionX);
-        assertArrayEquals(expectedPosition, returnPositionY);
+        assertEquals(oldPosition, returnPositionX);
+        assertEquals(oldPosition, returnPositionY);
     }
 }
