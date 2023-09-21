@@ -1,5 +1,6 @@
 package com.levelup.forestsandmonsters;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -17,6 +18,8 @@ public class MapTest {
         int xCoordinate = 0;
         int yCoordinate = 0;
 
-        map.move(xCoordinate, yCoordinate);
+        int[] returnPosition = map.move(xCoordinate, yCoordinate);
+
+        assertArrayEquals(new int[]{xCoordinate, yCoordinate}, returnPosition);
     }
 }
