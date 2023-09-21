@@ -13,8 +13,9 @@ public class CharacterTest {
     }
 
     @Test
-    public void testCharacterName(String val) 
+    public void testCharacterName() 
     {
+       String val = "JimBob";
         Character character = new Character("JimBob");
         Assert.assertEquals(character.getName(), val);
     }

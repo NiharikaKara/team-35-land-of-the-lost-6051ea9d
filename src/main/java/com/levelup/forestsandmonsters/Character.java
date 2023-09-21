@@ -10,7 +10,7 @@ public class Character {
 
     public Character(String name)
     {
-        name = this.name;
+        this.name = name;
     }
 
     public String getName()
