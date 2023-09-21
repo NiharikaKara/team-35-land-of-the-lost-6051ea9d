@@ -1,20 +1,23 @@
 package com.levelup.forestsandmonsters;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 
 public class MapTest {
+    
     @Test
     public void test_map_init() {
-        Map map = new Map();
+        Map map = new Map(4,4);
         assertNotNull("Map object created", map);
+        assertEquals(16, map.size);
     }
 
     @Test
     public void test_map_move() {
-        Map map = new Map();
+        Map map = new Map(4,4);
         
         int[] position = new int[]{0, 0};
 
@@ -25,7 +28,7 @@ public class MapTest {
 
     @Test
     public void test_map_bad_move() {
-        Map map = new Map();
+        Map map = new Map(4,4);
         
         int[] positionBadX = new int[]{-1, 0};
         int[] positionBadY = new int[]{0, -1};
