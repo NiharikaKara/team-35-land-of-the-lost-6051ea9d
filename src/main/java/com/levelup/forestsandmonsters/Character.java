@@ -1,11 +1,12 @@
 package com.levelup.forestsandmonsters;
 
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
+import java.awt.Point;
 
 public class Character {
     static String DEFAULT_CHARACTER_NAME = "Character";
     private String name;
-    private Map gameMap;
+    private Map gameMap = new Map(10, 10);
     private Position position;
     
 
@@ -64,7 +65,9 @@ public class Character {
              newPosition.yCoordinate = this.position.yCoordinate;
              newPosition.xCoordinate = this.position.xCoordinate;
              break;
-      }    
+      } 
+    
+      gameMap.move(new Point(this.position.xCoordinate, this.position.yCoordinate), new Point(newPosition.xCoordinate, newPosition.yCoordinate));  
       this.setPosition(newPosition);
     }
 }
