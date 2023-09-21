@@ -6,8 +6,8 @@ public class Position {
     int yCoordinate;
 
     public Position(int xCoordinate, int yCoordinate) {
-        xCoordinate = this.xCoordinate;
-        yCoordinate = this.yCoordinate;
+        this.xCoordinate = xCoordinate;
+        this.yCoordinate = yCoordinate;
     }
 
     /*public Position getPosition(int xCoordinate, int yCoordinate){
