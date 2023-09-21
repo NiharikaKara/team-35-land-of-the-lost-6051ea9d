@@ -35,8 +35,6 @@ public class Character {
 
     public void setPosition(Position characterPosition) {
         this.position = characterPosition;
-        System.out.println("yCoordinate: " + characterPosition.yCoordinate);
-        System.out.println("xCoordinate: " + characterPosition.xCoordinate);
     }
 
     public void move(DIRECTION direction)
@@ -67,7 +65,8 @@ public class Character {
              break;
       } 
     
-      gameMap.move(new Point(this.position.xCoordinate, this.position.yCoordinate), new Point(newPosition.xCoordinate, newPosition.yCoordinate));  
-      this.setPosition(newPosition);
+     Point point = gameMap.move(new Point(this.position.xCoordinate, this.position.yCoordinate), new Point(newPosition.xCoordinate, newPosition.yCoordinate));  
+     
+     this.setPosition(new Position(point.x, point.y));
     }
 }
