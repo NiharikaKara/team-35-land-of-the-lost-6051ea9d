@@ -29,7 +29,7 @@ public class CharacterTest {
 
     @Test
     public void initializeMap() {
-        Map gameMap = new Map(4,4); 
+        Map gameMap = new Map(10,10); 
         Character character = new Character();
         assertNotNull(gameMap);
     }
