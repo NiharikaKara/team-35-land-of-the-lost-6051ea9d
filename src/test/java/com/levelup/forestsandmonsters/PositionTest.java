@@ -1,7 +1,5 @@
 package com.levelup.forestsandmonsters;
 
-import static org.junit.Assert.assertNotNull;
-
 import org.junit.Assert;
 import org.junit.Test;
 
