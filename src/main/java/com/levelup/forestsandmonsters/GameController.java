@@ -10,7 +10,9 @@ public class GameController {
     public class GameStatus {
         // TODO: Add other status data
         public String characterName = DEFAULT_CHARACTER_NAME;
-        public Point currentPosition = null;
+        public Point startingPosition = null;
+        public Point endingPosition = null;
+        public int moveCount = 0;
     }
 
     public void setCharacterPosition(Point coordinates) {
