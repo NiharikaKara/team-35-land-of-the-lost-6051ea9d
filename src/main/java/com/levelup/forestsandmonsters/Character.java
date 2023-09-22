@@ -8,19 +8,16 @@ public class Character {
     private String name;
     private Map gameMap = new Map(10, 10);
     private Position position;
-    
 
     public Character() {
         name = Character.DEFAULT_CHARACTER_NAME;
     }
 
-    public Character(String name)
-    {
+    public Character(String name) {
         this.name = name;
     }
 
-    public String getName()
-    {
+    public String getName() {
         return this.name;
     }
 
@@ -37,36 +34,29 @@ public class Character {
         this.position = characterPosition;
     }
 
-    public void move(DIRECTION direction)
-    {
-               Position newPosition = new Position(-1, -1);
+    public void move(DIRECTION direction) {
+        Position newPosition = new Position(-1, -1);
+        newPosition.yCoordinate = this.position.yCoordinate;
+        newPosition.xCoordinate = this.position.xCoordinate;
 
-      switch(direction)    
-      {        
-        case NORTH:
-            newPosition.yCoordinate = this.position.yCoordinate-1;
-            newPosition.xCoordinate = this.position.xCoordinate;
-             break;
-        case SOUTH:
-              newPosition.yCoordinate = this.position.yCoordinate+1;
-               newPosition.xCoordinate = this.position.xCoordinate;
-             break;    
-        case WEST:
-              newPosition.yCoordinate = this.position.yCoordinate;
-             newPosition.xCoordinate = this.position.xCoordinate-1;
-             break;
-        case EAST:
-             newPosition.yCoordinate = this.position.yCoordinate;
-            newPosition.xCoordinate = this.position.xCoordinate+1;
-             break;
-        default:
-             newPosition.yCoordinate = this.position.yCoordinate;
-             newPosition.xCoordinate = this.position.xCoordinate;
-             break;
-      } 
-    
-     Point point = gameMap.move(new Point(this.position.xCoordinate, this.position.yCoordinate), new Point(newPosition.xCoordinate, newPosition.yCoordinate));  
-     
-     this.setPosition(new Position(point.x, point.y));
+        switch (direction) {
+            case NORTH:
+                newPosition.yCoordinate--;
+                break;
+            case SOUTH:
+                newPosition.yCoordinate++;
+                break;
+            case WEST:
+                newPosition.xCoordinate--;
+                break;
+            case EAST:
+                newPosition.xCoordinate++;
+                break;
+        }
+
+        Point point = gameMap.move(new Point(this.position.xCoordinate, this.position.yCoordinate),
+                new Point(newPosition.xCoordinate, newPosition.yCoordinate));
+
+        this.setPosition(new Position(point.x, point.y));
     }
 }
