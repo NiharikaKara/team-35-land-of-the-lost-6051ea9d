@@ -1,8 +1,9 @@
 package com.levelup.forestsandmonsters;
 
 public class Position {  
-    int xCoordinate;
-    int yCoordinate;
+    
+    public int xCoordinate;
+    public int yCoordinate;
 
     public Position(int xCoordinate, int yCoordinate) {
         this.xCoordinate = xCoordinate;
