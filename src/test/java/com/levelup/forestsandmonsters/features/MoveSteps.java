@@ -38,7 +38,7 @@ public class MoveSteps {
         gc.setCharacterPosition(new Point(this.startX, this.startY));
         gc.move(this.direction);
         GameController.GameStatus status = gc.getStatus();
-        this.currentPosition = status.currentPosition;
+        this.currentPosition = status.endingPosition;
     }
     
     @Then("the character is now at position with XCoordinates {int}")

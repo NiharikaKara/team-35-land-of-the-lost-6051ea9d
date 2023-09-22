@@ -13,15 +13,6 @@ public class GameControllerTest {
         assertNotNull(testObj.status);
     }
 
-    @Test
-    public void GameStatusResultsIsEmptyTest() {
-        GameController testObj = new GameController();
-        assertNotNull(testObj.getStatus());
-        Assert.assertNotNull(testObj.getStatus().characterName);
-        Assert.assertNotNull(testObj.getStatus().startingPosition);
-        Assert.assertNotNull(testObj.getStatus().endingPosition);
-        Assert.assertNotNull(testObj.getStatus().moveCount);
-    }
 
     @Test
     public void ValidateGameStatusResults() {
@@ -34,6 +25,10 @@ public class GameControllerTest {
         testObj.getStatus().startingPosition = startingPosition;
         testObj.getStatus().endingPosition = endingPosition;
         testObj.getStatus().moveCount = moveCount;
+        Assert.assertNotNull(testObj.getStatus().characterName);
+        Assert.assertNotNull(testObj.getStatus().startingPosition);
+        Assert.assertNotNull(testObj.getStatus().endingPosition);
+        Assert.assertNotNull(testObj.getStatus().moveCount);
         Assert.assertEquals(val, testObj.getStatus().characterName);
         Assert.assertEquals(startingPosition, testObj.getStatus().startingPosition);
         Assert.assertEquals(endingPosition, testObj.getStatus().endingPosition);
