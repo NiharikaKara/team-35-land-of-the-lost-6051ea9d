@@ -7,6 +7,7 @@ public class GameController {
     // low representational gap
     static final String DEFAULT_CHARACTER_NAME = "Character";
     public Character character = null;
+    public Map map = new Map(10, 10);
 
     public class GameStatus {
         // TODO: Add other status data

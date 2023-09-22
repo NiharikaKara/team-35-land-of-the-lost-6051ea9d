@@ -49,4 +49,9 @@ public class GameControllerTest {
         Assert.assertEquals(val, testObj.character.getName());
     }
 
+    @Test
+    public void intializeMap() {
+      GameController testObj = new GameController();
+      Assert.assertNotNull("map is available",testObj.map);  
+    } 
 }
