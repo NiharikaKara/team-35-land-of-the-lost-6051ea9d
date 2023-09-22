@@ -1,6 +1,5 @@
 package com.levelup.forestsandmonsters;
 
-
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,11 +25,6 @@ public class Map {
     
 
     public Point move(Point oldPosition, Point newPosition) {
-        // if(position[0] < 0 || position[1] < 0)
-        // {
-        //     return new int[]{0,0};
-        // }
-
         if(!this.isValidPosition(newPosition)) {
             return oldPosition;        
         }
