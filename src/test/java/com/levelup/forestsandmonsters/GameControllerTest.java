@@ -50,8 +50,21 @@ public class GameControllerTest {
     }
 
     @Test
-    public void intializeMap() {
+    public void IntializeMap() {
       GameController testObj = new GameController();
       Assert.assertNotNull("map is available",testObj.map);  
     } 
+
+    @Test
+    public void ValidateEnterMap(){
+        GameController testObj = new GameController();
+        Position position = new Position (4, 5);
+        testObj.startGame();
+        Assert.assertEquals(position.getPoint(), testObj.character.getPosition().getPoint());
+        Assert.assertEquals(position.getPoint(), testObj.getStatus().startingPosition);
+        Assert.assertEquals(position.getPoint(), testObj.getStatus().endingPosition);
+        Assert.assertEquals(0, testObj.getStatus().moveCount);
+    
+    }
+
 }

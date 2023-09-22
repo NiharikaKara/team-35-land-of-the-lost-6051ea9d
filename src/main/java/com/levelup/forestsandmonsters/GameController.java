@@ -6,7 +6,7 @@ public class GameController {
     // TODO: If your stakeholder wants to call this CHARACTER, change var name for
     // low representational gap
     static final String DEFAULT_CHARACTER_NAME = "Character";
-    public Character character = null;
+    public Character character = new Character();
     public Map map = new Map(10, 10);
 
     public class GameStatus {
@@ -40,13 +40,20 @@ public class GameController {
         } else {
             status.characterName = DEFAULT_CHARACTER_NAME;
         }
-        this.character = new Character(status.characterName);
+        this.character.setName(status.characterName);
     }
 
     public void startGame() {
         // TODO: Implement startGame - Should probably create tiles and put the character
         // on them?
         // TODO: Should also update the game results?
+        Position position = new Position (4, 5);
+
+        this.character.setPosition(position);
+        this.status.characterName = this.character.getName();
+        this.status.startingPosition = position.getPoint();
+        this.status.endingPosition = position.getPoint();
+        this.status.moveCount = 0;
     }
 
     public GameStatus getStatus() {
