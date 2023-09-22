@@ -35,4 +35,18 @@ public class GameControllerTest {
         Assert.assertEquals(moveCount, testObj.getStatus().moveCount);
     }
 
+     @Test
+    public void ValidateUpdateCharacterPosition() {
+
+
+    }
+
+    @Test
+    public void ValidateCharacterName() {
+        GameController testObj = new GameController();
+        String val = "JimBob";
+        testObj.createCharacter(val);
+        Assert.assertEquals(val, testObj.character.getName());
+    }
+
 }

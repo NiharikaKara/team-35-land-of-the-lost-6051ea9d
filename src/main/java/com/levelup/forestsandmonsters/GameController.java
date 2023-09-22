@@ -6,6 +6,7 @@ public class GameController {
     // TODO: If your stakeholder wants to call this CHARACTER, change var name for
     // low representational gap
     static final String DEFAULT_CHARACTER_NAME = "Character";
+    public Character character = null;
 
     public class GameStatus {
         // TODO: Add other status data
@@ -15,7 +16,8 @@ public class GameController {
         public int moveCount = 0;
     }
 
-    public void setCharacterPosition(Point coordinates) {
+    public void updateCharacterPosition(Point coordinates) {
+
         }
 
     GameStatus status;
@@ -37,6 +39,7 @@ public class GameController {
         } else {
             status.characterName = DEFAULT_CHARACTER_NAME;
         }
+        this.character = new Character(status.characterName);
     }
 
     public void startGame() {
