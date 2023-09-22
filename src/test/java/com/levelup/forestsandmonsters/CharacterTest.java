@@ -32,6 +32,7 @@ public class CharacterTest {
         Map gameMap = new Map(10,10); 
         Character character = new Character();
         assertNotNull(gameMap);
+        gameMap.move(new )
     }
 
     @Test
